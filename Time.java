@@ -30,20 +30,14 @@ public class Time {
 	
 	public Time(int hours, int minutes)
 	{
-		if (hours > 23)
+		if (hours > 23 || minutes > 59)
 		{
-			hours = 23;
+			this.hours = 23;
+			this.minutes = 59;
 		}
 		else
 		{
 			this.hours = hours;
-		}
-		if(minutes > 59)
-		{
-			minutes = 59;
-		}
-		else
-		{
 			this.minutes = minutes;
 		}
 	}
